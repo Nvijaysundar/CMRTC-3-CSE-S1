@@ -48,10 +48,10 @@ Booth 2  Cars: 30, Trucks: 20, Shift: 4 hrs
 Total Vehicles: 80  
 Total Revenue: ₹5500
 
-
 public class TollSystem {
-	static int carPrice = 50,truckPrice = 100;
+	static int carPrice = 50,truckPrice = 100,totalVehicals=0,totalRevenue = 0;
 	int carCount,truckCount,shiftHours,boothNo;
+	
 	
 	TollSystem(int boothNo,int carCount,int truckCount,int shiftHours)
 	{
@@ -63,6 +63,8 @@ public class TollSystem {
 	
 	void display()
 	{
+		totalVehicals += this.carCount+this.truckCount;
+		totalRevenue += this.calculateRevenue();
 		System.out.print("Booth No: "+this.boothNo+" ");
 		System.out.println("Cars: "+this.carCount+" Trucks: "+
 				this.truckCount+" Shift : "+this.shiftHours+" hrs");
@@ -109,10 +111,7 @@ public class TollSystem {
 		b2.display();
 		
 		b1.display();
+		System.out.println("Total vehicals : "+totalVehicals);
+		System.out.println("Total Revenue : "+totalRevenue);
 	}
 }	
-
-
-
-
-

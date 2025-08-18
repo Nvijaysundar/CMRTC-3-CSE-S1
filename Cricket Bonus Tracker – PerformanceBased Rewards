@@ -1,0 +1,36 @@
+Cricket Bonus Tracker – PerformanceBased Rewards
+
+ Scenario (Advanced):
+
+Each cricket player earns:
+
+* ₹10 per run
+* ₹200 flat bonus if runs > 50
+* Strike rate bonus (10% of base) if:
+* Player runs > average runs of all players
+* Star Player Bonus: Player with highest runs gets an extra ₹500
+
+
+Sample Output:
+
+Player 7  Runs: 45
+  Base Bonus: ₹450
+  Final Bonus: ₹450
+
+Player 18  Runs: 60
+  Base Bonus: ₹600
+  Flat Bonus: ₹200
+  Above Avg Bonus: ₹80
+  Final Bonus: ₹880
+
+Player 10  Runs: 75
+  Base Bonus: ₹750
+  Flat Bonus: ₹200
+  Above Avg Bonus: ₹105
+  Star Player Bonus: ₹500
+  Final Bonus: ₹1555
+
+Average Runs: 60
+Highest Score: 75
+Total Players: 3
+Total Bonus Paid: ₹2885

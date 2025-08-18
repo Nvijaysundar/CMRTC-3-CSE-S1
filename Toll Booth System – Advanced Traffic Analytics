@@ -47,3 +47,72 @@ Booth 2  Cars: 30, Trucks: 20, Shift: 4 hrs
 
 Total Vehicles: 80  
 Total Revenue: ₹5500
+
+
+public class TollSystem {
+	static int carPrice = 50,truckPrice = 100;
+	int carCount,truckCount,shiftHours,boothNo;
+	
+	TollSystem(int boothNo,int carCount,int truckCount,int shiftHours)
+	{
+		this.boothNo = boothNo;
+		this.carCount = carCount;
+		this.truckCount = truckCount;
+		this.shiftHours = shiftHours;
+	}
+	
+	void display()
+	{
+		System.out.print("Booth No: "+this.boothNo+" ");
+		System.out.println("Cars: "+this.carCount+" Trucks: "+
+				this.truckCount+" Shift : "+this.shiftHours+" hrs");
+		System.out.println("Total Revenue: ₹"+this.calculateRevenue());
+		System.out.printf("Vehicles/hour: %.1f\n",
+					this.calculateVehicalPerHour());
+		System.out.printf("Revenue/hour: ₹%.1f\n",calculateRevenue()/(float)this.shiftHours);
+		System.out.println("Avg Toll/Vehicle: ₹"+calculateRevenue()/(this.carCount+this.truckCount));
+		System.out.println("Traffic Status :"+this.trafStatus());
+		System.out.println("Performance : "+this.getPerformance());
+		System.out.println();
+		
+	}
+	private String getPerformance() {
+		int revenue = calculateRevenue();
+		if(revenue >2000 )
+			return "Excellent";
+		else if (revenue > 1500)
+			return "Good";
+		else if(revenue>1000)
+			return "Average";
+		return "Low";
+	}
+
+	private String trafStatus() {
+		
+		return (calculateVehicalPerHour()>10)?"Peak hour Load":"Normal";
+	}
+
+	private float calculateVehicalPerHour() {
+		
+		return (this.carCount+this.truckCount)/(float)this.shiftHours;
+	}
+
+	private int calculateRevenue() {
+		return this.carCount*carPrice + this.truckCount*truckPrice;
+	}
+
+	public static void main(String[] args) {
+		TollSystem b1 = new TollSystem(1,10,20,5);
+		
+		TollSystem b2 = new TollSystem(2,25,30,5);
+		
+		b2.display();
+		
+		b1.display();
+	}
+}	
+
+
+
+
+

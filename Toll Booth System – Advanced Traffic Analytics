@@ -1,0 +1,49 @@
+1. Toll Booth System – Advanced Traffic Analytics
+
+ Scenario:
+
+A toll plaza has multiple booths. Each booth records:
+
+* Car count
+* Truck count
+* Shift duration (in hours)
+* Toll per vehicle (₹50 for cars, ₹100 for trucks)
+
+The system must:
+
+* Calculate:
+
+  * Total revenue
+  * Vehicles per hour
+  * Revenue per hour
+  * Average toll per vehicle
+  * Peak hour detection: If vehicles/hour > 10 → Mark as "Peak Hour Load"
+
+* Categorize booth performance using a switch:
+
+  * If revenue > ₹2000 → "Excellent"
+  * ₹15002000 → "Good"
+  * ₹10001500 → "Average"
+  * Else → "Low"
+
+
+ Sample Output:
+
+Booth 1  Cars: 20, Trucks: 10, Shift: 4 hrs
+  Total Revenue: ₹2000
+  Vehicles/hour: 7.5
+  Revenue/hour: ₹500
+  Avg Toll/Vehicle: ₹66
+  Traffic Status: Normal
+  Performance: Good
+
+Booth 2  Cars: 30, Trucks: 20, Shift: 4 hrs
+  Total Revenue: ₹3500
+  Vehicles/hour: 12.5
+  Revenue/hour: ₹875
+  Avg Toll/Vehicle: ₹70
+  Traffic Status: Peak Hour Load
+  Performance: Excellent
+
+Total Vehicles: 80  
+Total Revenue: ₹5500

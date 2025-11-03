@@ -1,0 +1,622 @@
+Problem 1 : The Lost Parcel Tag
+A courier company assigns unique tracking numbers from 1 to N for each parcel. However, during an audit, one of the tags went missing. You are given an array of size N−1 that contains all tags except the missing one. Your task is to find the missing tag using only array operations. You are not allowed to use any additional data structures like hash maps or sets.
+Objective:
+ Determine the missing number in a sequence from 1 to N using only array operations.
+Input:
+●	First line: Integer N — the total number of parcels.
+
+●	Second line: N−1 space-separated integers — the available tracking numbers.
+
+Output:
+●	A single integer — the missing tracking number.
+
+Constraints:
+●	2 ≤ N ≤ 1000
+
+●	1 ≤ tracking[i] ≤ N
+
+●	All numbers are distinct
+
+●	Exactly one number between 1 and N is missing
+
+Sample Input 1:
+ 5
+ 1 2 4 5
+Sample Output 1:
+ 3
+Sample Input 2:
+ 4
+ 2 3 1
+Sample Output 2:
+ 4
+Edge and Hidden Test Cases:
+Test Case 1:
+ Input:
+ 2
+ 1
+ Output:
+ 2
+Test Case 2:
+ Input:
+ 3
+ 1 3
+ Output:
+ 2
+Test Case 3:
+ Input:
+ 10
+ 1 2 3 4 5 6 7 8 9
+ Output:
+ 10
+Test Case 4:
+ Input:
+ 6
+ 6 5 4 2 1
+ Output:
+ 3
+Test Case 5:
+ Input:
+ 1000
+ (all numbers from 1 to 1000 except 999, shuffled)
+ Output:
+ 999
+
+
+
+Problem 2 : Reverse the Conveyor Order
+A small warehouse uses a conveyor belt to move boxes in a specific order. At the end of the day, the boxes need to be reversed in order for maintenance. You are given the current order of boxes on the conveyor (represented by an array of integers, where each integer denotes a unique box ID). Your task is to reverse the order of the array in-place (i.e., without using extra arrays or data structures).
+Objective:
+ Given an array of N integers, reverse the array in-place using only array operations.
+Input:
+●	First line: Integer N — the number of boxes on the conveyor
+
+●	Second line: N space-separated integers — the box IDs in current order
+
+Output:
+●	Print the reversed order of the box IDs as space-separated integers
+
+Constraints:
+●	1 ≤ N ≤ 1000
+
+●	−10⁹ ≤ box[i] ≤ 10⁹
+
+Sample Input 1:
+ 5
+ 10 20 30 40 50
+Sample Output 1:
+ 50 40 30 20 10
+Sample Input 2:
+ 1
+ 42
+Sample Output 2:
+ 42
+Edge and Hidden Test Cases:
+Test Case 1:
+ Input:
+ 2
+ 5 7
+ Output:
+ 7 5
+
+Test Case 2:
+
+ Input:
+ 4
+ 1 -2 -3 4
+ Output:
+ 4 -3 -2 1
+Test Case 3:
+ Input:
+ 6
+ 1000 999 998 997 996 995
+ Output:
+ 995 996 997 998 999 1000
+Test Case 4:
+ Input:
+ 3
+ 0 0 0
+ Output:
+ 0 0 0
+Test Case 5:
+ Input:
+ 10
+ 1 2 3 4 5 6 7 8 9 10
+ Output:
+ 10 9 8 7 6 5 4 3 2 1
+
+
+Problem 3 : Counting the Defective Items
+
+A quality control team is scanning a line of products, each marked with an integer label. A product with label 0 is considered defective. Your job is to count the total number of defective products using only array operations.
+Objective:
+ Count how many times the number 0 appears in the given array.
+Input:
+●	First line: Integer N — the number of products
+
+●	Second line: N space-separated integers — labels of the products
+
+Output:
+●	A single integer — the number of defective items (i.e., count of 0s)
+
+Constraints:
+●	1 ≤ N ≤ 1000
+
+●	−10⁹ ≤ label[i] ≤ 10⁹
+
+Sample Input 1:
+ 6
+ 1 0 0 2 3 0
+Sample Output 1:
+ 3
+Sample Input 2:
+ 4
+ 5 1 3 2
+Sample Output 2:
+ 0
+Edge and Hidden Test Cases:
+Test Case 1:
+ Input:
+ 1
+ 0
+ Output:
+ 1
+Test Case 2:
+ Input:
+ 3
+ 0 0 0
+ Output:
+ 3
+Test Case 3:
+ Input:
+ 5
+ 10 20 30 40 50
+ Output:
+ 0
+Test Case 4:
+ Input:
+ 7
+ 0 -1 0 -2 0 -3 0
+ Output:
+ 4
+Test Case 5:
+ Input:
+ 10
+ 0 1 2 3 4 5 6 7 8 9
+ Output:
+ 1
+
+
+Problem 4 (Easy): Counting Customers Below Threshold
+
+A supermarket records the number of items each customer purchases. The manager wants to know how many customers bought less than or equal to a certain threshold number of items (say, promotional customers). You are given an array of item counts per customer and a threshold value. Count how many customers bought items less than or equal to the threshold.
+Objective:
+Count the number of array elements that are less than or equal to a given threshold.
+Input:
+●	First line: Integer N — number of customers
+
+●	Second line: N space-separated integers — number of items each customer purchased
+
+●	Third line: Integer T — the threshold
+
+Output:
+●	A single integer — number of customers who bought T or fewer items
+
+Constraints:
+●	1 ≤ N ≤ 1000
+
+●	0 ≤ items[i] ≤ 10⁶
+
+●	0 ≤ T ≤ 10⁶
+
+Sample Input 1:
+ 6
+ 2 5 1 7 4 3
+ 4
+Sample Output 1:
+ 4
+Sample Input 2:
+ 5
+ 10 20 30 40 50
+ 25
+Sample Output 2:
+ 2
+Edge and Hidden Test Cases:
+Test Case 1:
+ Input:
+ 1
+ 0
+ 0
+ Output:
+ 1
+Test Case 2:
+ Input:
+ 4
+ 0 0 0 0
+ 1
+ Output:
+ 4
+Test Case 3:
+ Input:
+ 3
+ 1 2 3
+ 0
+ Output:
+ 0
+Test Case 4:
+ Input:
+ 5
+ 4 4 4 4 4
+ 4
+ Output:
+ 5
+Test Case 5:
+ Input:
+ 8
+ 10 9 8 7 6 5 4 3
+ 6
+ Output:
+ 4
+
+
+Problem 5 : Find First Occurrence of a Faulty Reading
+In a temperature monitoring system, sensors record temperature readings periodically and store them in an array. A reading of −999 is used to indicate a faulty sensor reading. Your task is to find the index (0-based) of the first occurrence of a faulty reading. If no such reading exists, print -1.
+Objective:
+ Find the index of the first occurrence of −999 in the array.
+Input:
+●	First line: Integer N — the number of readings
+
+●	Second line: N space-separated integers — the temperature readings
+
+Output:
+●	A single integer — the index of the first −999 in the array, or −1 if not found
+
+Constraints:
+●	1 ≤ N ≤ 1000
+
+●	−10⁹ ≤ reading[i] ≤ 10⁹
+
+Sample Input 1:
+ 6
+ 23 21 −999 20 22 24
+Sample Output 1:
+ 2
+Sample Input 2:
+ 4
+ 30 28 27 29
+Sample Output 2:
+ −1
+Edge and Hidden Test Cases:
+Test Case 1:
+ Input:
+ 1
+ −999
+ Output:
+ 0
+Test Case 2:
+ Input:
+ 3
+ −999 −999 −999
+ Output:
+ 0
+Test Case 3:
+ Input:
+ 5
+ 0 0 0 0 −999
+ Output:
+ 4
+Test Case 4:
+ Input:
+ 7
+ 25 26 27 −1000 30 29 −999
+ Output:
+ 6
+Test Case 5:
+ Input:
+ 8
+ −1 −2 −3 −4 −5 −6 −7 −8
+ Output:
+ −1
+
+Problem 6 (Easy): Counting Even Numbers in an Array
+
+You are given an array that represents the ages of customers visiting a store throughout the day. The store manager wants to know how many customers had even-numbered ages for a survey. You are required to write a program to count how many numbers in the array are even.
+Objective:
+ Count the number of even elements in the array.
+Input:
+●	First line: Integer N — the number of customer entries
+
+●	Second line: N space-separated integers — the ages of customers
+
+Output:
+●	A single integer — number of even ages in the array
+
+Constraints:
+●	1 ≤ N ≤ 1000
+
+●	0 ≤ age[i] ≤ 100
+
+Sample Input 1:
+ 6
+ 22 35 18 41 28 50
+Sample Output 1:
+ 4
+Sample Input 2:
+ 4
+ 21 23 25 27
+Sample Output 2:
+ 0
+Edge and Hidden Test Cases:
+Test Case 1:
+ Input:
+ 1
+ 2
+Output:
+ 1
+Test Case 2:
+ Input:
+ 5
+ 0 0 0 0 0
+Output:
+ 5
+Test Case 3:
+ Input:
+ 6
+ 1 2 3 4 5 6
+Output:
+ 3
+Test Case 4:
+ Input:
+ 3
+ 99 100 101
+Output:
+ 1
+Test Case 5:
+ Input:
+ 10
+ 1 3 5 7 9 11 13 15 17 19
+Output:
+ 0
+
+
+
+
+Problem 7 : Highest Marks in the Classroom
+
+You are helping a school teacher who just completed grading a class test. The scores of all students have been entered into a digital record. The teacher wants to quickly find out which student scored the highest to reward them in front of the class.
+Objective:
+ Find and print the highest score from the list of student scores.
+Input:
+●	First line: An integer N — number of students
+
+●	Second line: N space-separated integers — the scores of the students
+
+Output:
+●	A single integer — the highest score
+
+Constraints:
+●	1 ≤ N ≤ 1000
+
+●	−10⁶ ≤ score[i] ≤ 10⁶
+
+Sample Input 1:
+ 5
+ 45 92 61 38 90
+Sample Output 1:
+ 92
+Sample Input 2:
+ 4
+ −5 −10 −3 −1
+Sample Output 2:
+ −1
+Edge and Hidden Test Cases:
+Test Case 1:
+ Input:
+ 1
+ 12
+Output:
+ 12
+Test Case 2:
+ Input:
+ 6
+ 100 99 98 97 96 95
+Output:
+ 100
+Test Case 3:
+ Input:
+ 6
+ −100 −99 −98 −97 −96 −95
+Output:
+ −95
+Test Case 4:
+ Input:
+ 10
+ 0 0 0 0 0 0 0 0 0 0
+Output:
+ 0
+
+
+Problem 8 : Evaluating Alternate Checkpoints
+
+A group of hikers is on a trail that has multiple checkpoints. Each checkpoint logs a number representing the terrain difficulty score. The organizer wants to analyze a specific pattern — only the scores logged at alternate checkpoints, starting from the very first one.
+You are given an array of N integers representing the difficulty scores in the order they were encountered. Your task is to compute a metric that only considers values at every alternate checkpoint, beginning with the first.
+Objective:
+ From the array, compute the total of elements at alternate positions starting from the first index (0, 2, 4, …).
+Input:
+●	First line: Integer N — the total number of checkpoints
+
+●	Second line: N space-separated integers — the terrain difficulty scores
+
+Output:
+●	A single integer — the required computed value
+
+Constraints:
+●	1 ≤ N ≤ 1000
+
+●	−10⁶ ≤ score[i] ≤ 10⁶
+
+Sample Input 1:
+ 6
+ 7 8 10 15 20 25
+Sample Output 1:
+ 37
+Sample Input 2:
+ 4
+ −5 −10 −15 −20
+Sample Output 2:
+ −20
+Edge and Hidden Test Cases:
+Test Case 1:
+ Input:
+ 1
+ 99
+Output:
+ 99
+Test Case 2:
+ Input:
+ 2
+ 100 200
+Output:
+ 100
+Test Case 3:
+ Input:
+ 3
+ 0 0 0
+Output:
+ 0
+Test Case 4:
+ Input:
+ 5
+ 5 −5 5 −5 5
+Output:
+ 15
+Test Case 5:
+ Input:
+ 10
+ 1 2 3 4 5 6 7 8 9 10
+Output:
+ 25
+Solutions:
+
+Problem 9 : Checkpoint Deviation Tracker
+
+During a cross-country race, a drone records the elevation deviation at each checkpoint. For some reason, the data may contain both positive and negative values, indicating upward and downward terrain shifts. The race organizers want a simple analysis: count how many checkpoints reported a value less than or equal to zero.
+Objective:
+ Count the number of elements in the array that are less than or equal to zero.
+Input:
+●	First line: Integer N — the number of checkpoints
+
+●	Second line: N space-separated integers representing elevation deviation values
+
+Output:
+●	A single integer — the count of non-positive deviation values
+
+Constraints:
+●	1 ≤ N ≤ 1000
+
+●	−10⁶ ≤ deviation[i] ≤ 10⁶
+
+Sample Input 1:
+ 6
+ 5 -2 0 -7 3 -1
+Sample Output 1:
+ 4
+Sample Input 2:
+ 3
+ 10 20 30
+Sample Output 2:
+ 0
+Edge and Hidden Test Cases:
+Test Case 1:
+ Input:
+ 1
+ 0
+Output:
+ 1
+Test Case 2:
+ Input:
+ 2
+ -1000000 1000000
+Output:
+ 1
+Test Case 3:
+ Input:
+ 5
+ -5 -4 -3 -2 -1
+Output:
+ 5
+Test Case 4:
+ Input:
+ 6
+ 0 0 0 0 0 0
+Output:
+ 6
+
+
+
+Problem 10 : Drone Altitude Logger
+A team is testing autonomous delivery drones that record their altitude at every second during a trial flight. The altitudes are stored in a linear array. The drone is considered to have flown “below threshold” if its altitude is below 100 meters.
+To evaluate safety compliance, your task is to determine how many altitude readings were below the safety threshold.
+Objective:
+ Count how many values in the array are less than 100.
+—
+Input:
+●	First line: Integer N — number of altitude readings
+
+●	Second line: N space-separated integers representing the altitudes in meters
+
+Output:
+●	A single integer — the number of altitude readings below 100
+
+Constraints:
+●	1 ≤ N ≤ 1000
+
+●	-10^6 ≤ altitude[i] ≤ 10^6
+
+—
+Sample Input 1:
+CopyEdit
+6
+120 95 87 130 100 60
+
+Sample Output 1:
+CopyEdit
+3
+
+Sample Input 2:
+CopyEdit
+3
+101 150 180
+
+Sample Output 2:
+CopyEdit
+0
+
+—
+Edge and Hidden Test Cases:
+Test Case 1:
+makefile
+CopyEdit
+Input:
+1
+99
+Output:
+1
+
+Test Case 2:
+makefile
+CopyEdit
+Input:
+4
+100 100 100 100
+Output:
+0
+
+Test Case 3:
+makefile
+CopyEdit
+Input:
+5
+-50 0 20 99 101
+Output:
+4
+
